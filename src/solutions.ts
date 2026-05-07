@@ -6,8 +6,23 @@ const filterEvenNumbers = (nums: number[]): number[] => {
 }
 
 //prolem-2
+
 const reverseString = (strings: string): string => {
      return strings.split('').reverse().join('')
 }
 
 // problem-3
+
+type StringOrNumber = string | number;
+
+const checkType = (input: StringOrNumber): string => {
+     if (typeof input === 'string') {
+          return "String"
+     } else if (typeof input === 'number') {
+          return "Number"
+     } else {
+          return "Give only string or number"
+     }
+
+}
+
