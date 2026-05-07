@@ -1,1 +1,7 @@
-console.log("hello world")
+//problem-1
+
+const filterEvenNumbers = (nums: number[]): number[] => {
+
+     return nums.filter((num) => num % 2 === 0)
+
+}
