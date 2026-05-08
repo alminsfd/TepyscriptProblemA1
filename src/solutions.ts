@@ -70,9 +70,18 @@ class Student extends Person {
      }
 
      getDetails() {
-          return ` "Name:${this.name} , Age: ${this.age} , Grade: ${this.grade}"`
+          return ` "Name:${this.name}, Age: ${this.age}, Grade: ${this.grade}"`
      }
 }
 
 
 // problem-07
+
+type numArray = number[]
+
+const getIntersection = (a: numArray, b: numArray): numArray => {
+     const commonNumber = a.filter((num) => b.includes(num))
+     return commonNumber
+
+}
+
