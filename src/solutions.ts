@@ -18,10 +18,8 @@ type StringOrNumber = string | number;
 const checkType = (input: StringOrNumber): string => {
      if (typeof input === 'string') {
           return "String"
-     } else if (typeof input === 'number') {
-          return "Number"
      } else {
-          return "Give only string or number"
+          return "Number"
      }
 
 }
@@ -40,7 +38,7 @@ interface Book {
      publishedYear: number
 }
 
-const toggleReadStatus = (books: Book) => {
+const toggleReadStatus = (books: Book): Book & { isRead: boolean } => {
 
      return {
           ...books,
@@ -55,8 +53,8 @@ class Person {
      name: string
      age: number
      constructor(name: string, age: number) {
-          this.name = name,
-               this.age = age
+          this.name = name;
+          this.age = age;
      }
 
 }
@@ -65,12 +63,12 @@ class Student extends Person {
      grade: string
 
      constructor(name: string, age: number, grade: string) {
-          super(name, age)
-          this.grade = grade
+          super(name, age);
+          this.grade = grade;
      }
 
      getDetails() {
-          return ` "Name:${this.name}, Age: ${this.age}, Grade: ${this.grade}"`
+          return `Name:${this.name}, Age: ${this.age}, Grade: ${this.grade}`
      }
 }
 
